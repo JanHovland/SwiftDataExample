@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="SwiftDataExample/Localizable.xcstrings" source-language="en" target-language="nb" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5230g"/>
+    </header>
+    <body>
+      <trans-unit id="Add Expense" xml:space="preserve">
+        <source>Add Expense</source>
+        <target state="translated">Legg til utgifter</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Cancel" xml:space="preserve">
+        <source>Cancel</source>
+        <target state="translated">Avbryt</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Date" xml:space="preserve">
+        <source>Date</source>
+        <target state="translated">Dato</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Done" xml:space="preserve">
+        <source>Done</source>
+        <target state="translated">Ferdig</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Expense" xml:space="preserve">
+        <source>Expense</source>
+        <target state="translated">Utgift</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Expenses" xml:space="preserve">
+        <source>Expenses</source>
+        <target state="translated">Urgifter</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Name" xml:space="preserve">
+        <source>Name</source>
+        <target state="translated">Navn</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="New Expense" xml:space="preserve">
+        <source>New Expense</source>
+        <target state="translated">Nytt utlegg</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="No expenses" xml:space="preserve">
+        <source>No expenses</source>
+        <target state="translated">Ikke noe utlegg</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Save" xml:space="preserve">
+        <source>Save</source>
+        <target state="translated">Lagre</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Start adding expenses to see your list." xml:space="preserve">
+        <source>Start adding expenses to see your list.</source>
+        <target state="translated">Begynn å legge inn utgifter ti utgifts listen.</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Update Expense" xml:space="preserve">
+        <source>Update Expense</source>
+        <target state="translated">Oppdater utgiftene</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Value" xml:space="preserve">
+        <source>Value</source>
+        <target state="translated">Beløp</target>
+        <note/>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SwiftDataExample/SwiftDataExample-InfoPlist.xcstrings" source-language="en" target-language="nb" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.0" build-num="16A5230g"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>SwiftDataExample</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

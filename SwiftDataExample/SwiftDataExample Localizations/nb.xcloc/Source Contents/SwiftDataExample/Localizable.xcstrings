@@ -1,0 +1,45 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Add Expense" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Date" : {
+
+    },
+    "Done" : {
+
+    },
+    "Expense" : {
+
+    },
+    "Expenses" : {
+
+    },
+    "Name" : {
+
+    },
+    "New Expense" : {
+
+    },
+    "No expenses" : {
+
+    },
+    "Save" : {
+
+    },
+    "Start adding expenses to see your list." : {
+
+    },
+    "Update Expense" : {
+
+    },
+    "Value" : {
+
+    }
+  },
+  "version" : "1.0"
+}
