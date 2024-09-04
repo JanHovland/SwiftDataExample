@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SwiftDataExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SwiftDataExample()
         }
+        .modelContainer(for: [Expense.self])
     }
 }
