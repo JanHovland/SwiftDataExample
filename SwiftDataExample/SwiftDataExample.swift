@@ -10,6 +10,10 @@ import SwiftData
 
 struct SwiftDataExample: View {
     
+    ///
+    /// Data er knyttet til Ipad eller iPhone (ikke til begge legge inn share?)
+    ///
+    
     /// Intro to SwiftData - Model, Container, Fetch, Create, Update & Delete
     /// https://www.youtube.com/watch?v=mvXFGikltPc
     
