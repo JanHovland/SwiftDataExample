@@ -70,11 +70,28 @@ struct ExpenseCell: View {
     let expense: Expense
     
     var body: some View {
-        HStack {
-            Text(expense.date, format: .dateTime.month(.abbreviated).day())
-            Text(expense.name)
-            Spacer()
-            Text(expense.value, format: .currency(code: "NO"))
+        VStack(alignment: .leading) {
+            HStack(spacing:0) {
+                Text("Date")
+                HStack (alignment: .center) {
+                    Text("\t\t\t")
+                    Text(expense.date, format: .dateTime.month(.abbreviated).day())
+                }
+            }
+            HStack(spacing:0) {
+                Text("Name")
+                HStack (alignment: .center) {
+                    Text("\t\t\t")
+                    Text(expense.name)
+                }
+            }
+            HStack(spacing:0) {
+                Text("Value")
+                HStack (alignment: .center) {
+                    Text("\t\t\t")
+                    Text(expense.value, format: .currency(code: Locale.current.currency?.identifier ?? ""))
+                }
+            }
             
         }
     }
@@ -94,7 +111,7 @@ struct AddExpenseSheet: View {
             Form {
                 TextField("Expense", text: $name)
                 DatePicker("Date", selection: $date, displayedComponents: .date)
-                TextField("Value", value: $value, format: .currency(code: "NO"))
+                TextField("Value", value: $value, format: .currency(code: Locale.current.currency?.identifier ?? ""))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("New Expense")
@@ -127,7 +144,7 @@ struct UpdateExpenseSheet: View {
             Form {
                 TextField("Name", text: $expense.name)
                 DatePicker("Date", selection: $expense.date, displayedComponents: .date)
-                TextField("Value", value: $expense.value, format: .currency(code: "NO"))
+                TextField("Value", value: $expense.value, format: .currency(code: Locale.current.currency?.identifier ?? ""))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Update Expense")

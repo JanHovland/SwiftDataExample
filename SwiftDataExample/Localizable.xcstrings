@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "\t\t\t" : {
+
+    },
     "Add Expense" : {
       "localizations" : {
         "nb" : {
@@ -56,7 +59,7 @@
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Urgifter"
+            "value" : "Utgifter"
           }
         }
       }
