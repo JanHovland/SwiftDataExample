@@ -10,7 +10,8 @@ import SwiftData
 
 @Model
 class Expense {
-    @Attribute(.unique) var name: String
+//    @Attribute(.unique) var name: String
+    var name: String
     var date: Date
     var value: Double
     
