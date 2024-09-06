@@ -10,9 +10,22 @@
 		DB17D8382C88615A002037AB /* SwiftDataExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DB17D8622C8A0545002037AB /* Exceptions for "SwiftDataExample" folder in "SwiftDataExample" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DB17D8372C88615A002037AB /* SwiftDataExample */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DB17D83A2C88615A002037AB /* SwiftDataExample */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DB17D8622C8A0545002037AB /* Exceptions for "SwiftDataExample" folder in "SwiftDataExample" target */,
+			);
 			path = SwiftDataExample;
 			sourceTree = "<group>";
 		};
@@ -257,6 +270,7 @@
 				DEVELOPMENT_TEAM = 6UR9TA6744;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftDataExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -287,6 +301,7 @@
 				DEVELOPMENT_TEAM = 6UR9TA6744;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftDataExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

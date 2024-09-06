@@ -16,6 +16,8 @@ struct SwiftDataExample: View {
     
     /// Intro to SwiftData - Model, Container, Fetch, Create, Update & Delete
     /// https://www.youtube.com/watch?v=mvXFGikltPc
+    /// https://www.hackingwithswift.com/books/ios-swiftui/syncing-swiftdata-with-cloudkit
+    
     
     @Environment(\.modelContext) var content
     @State private var isShowingItemSheet = false

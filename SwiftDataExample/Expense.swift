@@ -11,9 +11,9 @@ import SwiftData
 @Model
 class Expense {
 //    @Attribute(.unique) var name: String
-    var name: String
-    var date: Date
-    var value: Double
+    var name: String = ""
+    var date: Date = Date.now
+    var value: Double = 0.00
     
     init(name: String, date: Date, value: Double) {
         self.name = name
