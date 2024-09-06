@@ -17,7 +17,8 @@ struct SwiftDataExample: View {
     /// Intro to SwiftData - Model, Container, Fetch, Create, Update & Delete
     /// https://www.youtube.com/watch?v=mvXFGikltPc
     /// https://www.hackingwithswift.com/books/ios-swiftui/syncing-swiftdata-with-cloudkit
-    
+    /// https://www.kodeco.com/books/macos-by-tutorials/v1.0/chapters/3-adding-menus-toolbars
+    /// https://www.youtube.com/watch?v=PtQevkS1M2I
     
     @Environment(\.modelContext) var content
     @State private var isShowingItemSheet = false
@@ -39,14 +40,18 @@ struct SwiftDataExample: View {
                     }
                 }
             }
+            
             .navigationTitle("Expenses")
+#if os(iOS)
             .navigationBarTitleDisplayMode(.large)
+#endif
             .sheet(isPresented: $isShowingItemSheet) {
                 AddExpenseSheet()
             }
             .sheet(item: $expenseToEdit) { expense in
                 UpdateExpenseSheet(expense: expense)
             }
+#if os(iOS)
             .toolbar {
                 if !expenses.isEmpty {
                     Button("Add Expense", systemImage: "plus") {
@@ -54,6 +59,7 @@ struct SwiftDataExample: View {
                     }
                 }
             }
+#endif
             .overlay {
                 if expenses.isEmpty {
                     ContentUnavailableView(label: {
@@ -151,7 +157,7 @@ struct UpdateExpenseSheet: View {
                 TextField("Name", text: $expense.name)
                 DatePicker("Date", selection: $expense.date, displayedComponents: .date)
                 TextField("Value", value: $expense.value, format: .currency(code: Locale.current.currency?.identifier ?? ""))
-                    .keyboardType(.decimalPad)
+                   .keyboardType(.decimalPad)
             }
             .navigationTitle("Update Expense")
             .navigationBarTitleDisplayMode(.large)
