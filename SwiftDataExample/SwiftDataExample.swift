@@ -59,6 +59,14 @@ struct SwiftDataExample: View {
                     }
                 }
             }
+#else
+            .toolbar {
+                if !expenses.isEmpty {
+                    Button("Add Expense", systemImage: "plus") {
+                        isShowingItemSheet = true
+                    }
+                }
+            }
 #endif
             .overlay {
                 if expenses.isEmpty {
@@ -124,9 +132,12 @@ struct AddExpenseSheet: View {
                 TextField("Expense", text: $name)
                 DatePicker("Date", selection: $date, displayedComponents: .date)
                 TextField("Value", value: $value, format: .currency(code: Locale.current.currency?.identifier ?? ""))
+#if os(iOS)
                     .keyboardType(.decimalPad)
+#endif
             }
             .navigationTitle("New Expense")
+#if os(iOS)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarLeading) {
@@ -142,6 +153,23 @@ struct AddExpenseSheet: View {
                     }
                 }
             }
+            #else
+            .toolbar {
+                ToolbarItemGroup(placement: .destructiveAction) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                }
+                ToolbarItemGroup(placement: .confirmationAction) {
+                    Button("Save") {
+                        let expense = Expense(name: name, date: date, value: value)
+                        context.insert(expense)
+                        dismiss()
+                    }
+                }
+            }
+
+            #endif
         }
     }
 }
@@ -157,9 +185,12 @@ struct UpdateExpenseSheet: View {
                 TextField("Name", text: $expense.name)
                 DatePicker("Date", selection: $expense.date, displayedComponents: .date)
                 TextField("Value", value: $expense.value, format: .currency(code: Locale.current.currency?.identifier ?? ""))
-                   .keyboardType(.decimalPad)
+#if os(iOS)
+                    .keyboardType(.decimalPad)
+#endif
             }
             .navigationTitle("Update Expense")
+#if os(iOS)
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
@@ -167,7 +198,27 @@ struct UpdateExpenseSheet: View {
                         dismiss()
                     }
                 }
+                ToolbarItemGroup(placement: .topBarLeading) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                }
             }
+#else
+            .toolbar {
+                ToolbarItemGroup(placement: .confirmationAction) {
+                    Button("Done") {
+                        dismiss()
+                    }
+                }
+                ToolbarItemGroup(placement: .destructiveAction) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                }
+
+            }
+#endif
         }
     }
 }
