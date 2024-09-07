@@ -10,7 +10,8 @@ import SwiftData
 
 @Model
 class Expense {
-//    @Attribute(.unique) var name: String
+//    @Attribute(.unique) var name: String = ""
+//    #Unique<Expense>([\.name, \.date, \.value])
     var name: String = ""
     var date: Date = Date.now
     var value: Double = 0.00
