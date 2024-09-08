@@ -10,8 +10,15 @@ import SwiftData
 
 @Model
 class Expense {
-//    @Attribute(.unique) var name: String = ""
-//    #Unique<Expense>([\.name, \.date, \.value])
+    
+//
+//  NSLocalizedFailureReason = "CloudKit integration does not support unique constraints.
+//  The following entities are constrained:\nExpense: name";
+//
+//  @Attribute(.unique) var name: String = ""
+//  #Unique<Expense>([\.name, \.date, \.value])
+//  #Unique<Expense>([\.name])
+//    
     var name: String = ""
     var date: Date = Date.now
     var value: Double = 0.00
