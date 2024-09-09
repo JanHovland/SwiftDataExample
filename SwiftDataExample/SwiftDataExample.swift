@@ -48,9 +48,11 @@ struct SwiftDataExample: View {
             }
             
             .navigationTitle("Expenses")
-            .searchable(text: $search, placement: .navigationBarDrawer , prompt: "Search")
 #if os(iOS)
+            .searchable(text: $search, placement: .navigationBarDrawer , prompt: "Search")
             .navigationBarTitleDisplayMode(.large)
+#else
+            .searchable(text: $search, placement: .automatic , prompt: "Search")
 #endif
             .sheet(isPresented: $isShowingItemSheet) {
                 AddExpenseSheet()
@@ -58,7 +60,6 @@ struct SwiftDataExample: View {
             .sheet(item: $expenseToEdit) { expense in
                 UpdateExpenseSheet(expense: expense)
             }
-#if os(iOS)
             .toolbar {
                 if !expenses.isEmpty {
                     Button("Add Expense", systemImage: "plus") {
@@ -66,15 +67,6 @@ struct SwiftDataExample: View {
                     }
                 }
             }
-#else
-            .toolbar {
-                if !expenses.isEmpty {
-                    Button("Add Expense", systemImage: "plus") {
-                        isShowingItemSheet = true
-                    }
-                }
-            }
-#endif
             .overlay {
                 if expenses.isEmpty {
                     ContentUnavailableView(label: {
@@ -102,7 +94,7 @@ struct ExpenseCell: View {
                 Text("Date")
                 HStack (alignment: .center) {
                     Text("\t\t\t")
-                    Text(expense.date, format: .dateTime.month(.abbreviated).day())
+                    Text(expense.date, format: .dateTime.day().month().year())
                 }
             }
             HStack(spacing:0) {
@@ -160,7 +152,7 @@ struct AddExpenseSheet: View {
                     }
                 }
             }
-            #else
+#else
             .toolbar {
                 ToolbarItemGroup(placement: .destructiveAction) {
                     Button("Cancel") {
@@ -175,8 +167,8 @@ struct AddExpenseSheet: View {
                     }
                 }
             }
-
-            #endif
+            
+#endif
         }
     }
 }
@@ -223,7 +215,6 @@ struct UpdateExpenseSheet: View {
                         dismiss()
                     }
                 }
-
             }
 #endif
         }
