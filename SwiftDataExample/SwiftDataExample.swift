@@ -24,11 +24,17 @@ struct SwiftDataExample: View {
     @State private var isShowingItemSheet = false
     @Query(sort: \Expense.date) var expenses: [Expense]
     @State private var expenseToEdit: Expense?
+    @State private var search = ""
+    
+    var filterExpenses: [Expense] {
+        guard !search.isEmpty else {return expenses}
+        return expenses.filter { $0.name.localizedCaseInsensitiveContains(search) }
+    }
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(expenses) { expense in
+                ForEach(filterExpenses) { expense in
                     ExpenseCell(expense: expense)
                         .onTapGesture {
                             expenseToEdit = expense
@@ -42,6 +48,7 @@ struct SwiftDataExample: View {
             }
             
             .navigationTitle("Expenses")
+            .searchable(text: $search, placement: .navigationBarDrawer , prompt: "Search")
 #if os(iOS)
             .navigationBarTitleDisplayMode(.large)
 #endif

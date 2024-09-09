@@ -104,6 +104,9 @@
         }
       }
     },
+    "Search" : {
+
+    },
     "Start adding expenses to see your list." : {
       "localizations" : {
         "nb" : {
