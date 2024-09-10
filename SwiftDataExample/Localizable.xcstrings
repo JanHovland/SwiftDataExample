@@ -105,7 +105,14 @@
       }
     },
     "Search" : {
-
+      "localizations" : {
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Søk etter navn..."
+          }
+        }
+      }
     },
     "Start adding expenses to see your list." : {
       "localizations" : {
