@@ -111,7 +111,7 @@ struct ExpenseCell: View {
                     Text(expense.value, format: .currency(code: Locale.current.currency?.identifier ?? ""))
                 }
             }
-            
+           
         }
     }
 }
