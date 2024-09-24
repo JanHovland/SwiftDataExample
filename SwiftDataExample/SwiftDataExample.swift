@@ -19,6 +19,7 @@ struct SwiftDataExample: View {
     /// https://www.hackingwithswift.com/books/ios-swiftui/syncing-swiftdata-with-cloudkit
     /// https://www.kodeco.com/books/macos-by-tutorials/v1.0/chapters/3-adding-menus-toolbars
     /// https://www.youtube.com/watch?v=PtQevkS1M2I
+    /// https://www.bigmountainstudio.com/community/public/posts/280986-swiftui-how-do-i-change-the-background-color-in-2024
     
     @Environment(\.modelContext) var content
     @State private var isShowingItemSheet = false
